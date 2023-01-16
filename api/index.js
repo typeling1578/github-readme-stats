@@ -43,6 +43,10 @@ export default async (req, res) => {
     return res.send(renderError("Something went wrong"));
   }
 
+  if (username !== "typeling1578") {
+    return res.send(renderError("Something went wrong"));
+  }
+
   if (locale && !isLocaleAvailable(locale)) {
     return res.send(renderError("Something went wrong", "Language not found"));
   }
