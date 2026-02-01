@@ -9,7 +9,7 @@
 const parseQuery = (url) => {
   const { searchParams } = new URL(url);
   /** @type {Record<string, string | string[]>} */
-  const query = {};
+  const query = Object.create(null);
   for (const [key, value] of searchParams) {
     if (query[key]) {
       if (Array.isArray(query[key])) {
