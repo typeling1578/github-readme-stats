@@ -26,15 +26,20 @@ export default {
 
     switch (path) {
       case "/api":
+      case "/api/":
       case "/api/index":
         return workerAdapter(request, api);
       case "/api/pin":
+      case "/api/pin/":
         return workerAdapter(request, pin);
       case "/api/top-langs":
+      case "/api/top-langs/":
         return workerAdapter(request, topLangs);
       case "/api/wakatime":
+      case "/api/wakatime/":
         return workerAdapter(request, wakatime);
       case "/api/gist":
+      case "/api/gist/":
         return workerAdapter(request, gist);
       default:
         return new Response("Not Found", { status: 404 });
